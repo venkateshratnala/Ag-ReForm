@@ -1,0 +1,26 @@
+{
+  "name": "ag-rform",
+  "version": "0.0.1",
+  "description": "A simple html tags reusable component",
+  "author": "BlackBox Developer",
+  "repósitory": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": "https: //github.com/"
+  },
+  "homepage": "",
+  "keywords": [
+    "angular",
+    "AgRForm"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^13.2.0",
+    "@angular/core": "^13.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

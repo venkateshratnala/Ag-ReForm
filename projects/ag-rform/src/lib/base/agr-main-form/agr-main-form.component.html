@@ -1,0 +1,24 @@
+
+<form class="trc-form" [formGroup]="form" (submit)="onSubmit($event)" style="height: 100% !important">
+    <div class="list-grid">
+      <ng-container *ngFor="let field of fields">
+        <ng-container *ngIf="field.type != 'checkbox'; else chkboxField">
+          <div *ngIf="!field.hidden" [ngClass]="field.fieldCssClass">
+            <ng-container>
+              <ng-container style="width: 100% !important" FormFieldDirective [field]="field" [group]="form">
+              </ng-container>
+            </ng-container>
+          </div>
+        </ng-container>
+        <ng-template #chkboxField>
+          <div [ngClass]="field.fieldCssClass">
+            <ng-container *ngIf="!field.hidden">
+              <ng-container style="width: 100% !important" FormFieldDirective [field]="field" [group]="form">
+              </ng-container>
+            </ng-container>
+          </div>
+        </ng-template>
+      </ng-container>
+    </div>
+  </form>
+  
