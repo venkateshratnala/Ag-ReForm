@@ -1,0 +1,15 @@
+ <div class="row form-field trc-textbox" [formGroup]="group">
+    <div class="col-2"> <span class="label"  >{{ field.label }} <span *ngIf="field.isRequired" class="red">*</span></span></div>
+    <div class="col-3 mat-form-figure">
+      <ng-container *ngIf="field.inputType == 'number'">
+        <input [id]="field.id" #numberInput autocomplete="off" (keypress)="numberWithCommaOnly($event)" (paste)="onPaste($event)" matInput 
+          [ngClass]="field.cssClass" class="num-pad" [formControlName]="field.name" [min]="getMinValue()" [max]="getMaxValue()" [maxlength]="getMaxLength()" 
+          [readonly]="field.readOnly || false" (blur)="onBlur($event)" />
+      </ng-container>
+      <ng-container *ngIf="field.inputType != 'number'">
+        <input [id]="field.id" autocomplete="off" appEllipsifyMe matInput  [ngClass]="field.cssClass" [formControlName]="field.name" [min]="getMinValue()"
+          [max]="getMaxValue()" [maxlength]="getMaxLength()" [readonly]="field.readOnly || false" [type]="field.inputType" (input)="field.selectionChange? onChange($event) : ''"
+          />
+      </ng-container>
+    </div>
+  </div>
