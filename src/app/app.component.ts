@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
-import { AgrFormFieldConfig, AgrMainFormComponent } from 'AgRForm';
+import { AgRFormComponent, AgrFormFieldConfig,  } from 'AgRForm';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,7 @@ import { AgrFormFieldConfig, AgrMainFormComponent } from 'AgRForm';
 export class AppComponent implements OnInit {
   title = 'RvpForms';
   field: AgrFormFieldConfig[] = [];
-  @ViewChild('reusableForm') reusableForm : AgrMainFormComponent;
+  @ViewChild('reusableForm') reusableForm : AgRFormComponent
   constructor() {}
   
   ngOnInit(): void {
