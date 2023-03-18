@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { AgrFormFieldConfig } from '../agrFormFieldComponent';
+import { AgrFormFieldConfig } from '../../agrFormFieldComponent';
 
 @Component({
   selector: 'lib-input-tag',
