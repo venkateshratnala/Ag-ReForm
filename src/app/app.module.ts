@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { AgRFormModule } from 'AgRForm';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,AgRFormModule
   ],
   providers: [],
   bootstrap: [AppComponent]
